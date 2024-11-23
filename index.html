@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World!</title>
+    <meta
+      class="description"
+      content="This site contains who is Emmanuel V. Sanchez"
+    />
+  </head>
+  <style>
+    .container {
+      padding: 2rem;
+    }
+    .slider-wrapper {
+      position: relative;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+    .slider {
+      display: flex;
+      aspect-ratio: 16/9;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+      border-radius: 0.5rem;
+      border: 2px solid #000;
+    }
+    .slider img {
+      flex: 1 0 100%;
+      scroll-snap-align: start;
+      object-fit: cover;
+    }
+    .slider-nav {
+      display: flex;
+      column-gap: 1rem;
+      position: absolute;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .slider-nav a {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.75;
+      transition: opacity ease 250ms;
+    }
+    .slider-nav a:hover {
+      opacity: 1;
+    }
+    nav {
+      background-color: #000;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 30px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:last-child {
+      margin-right: 0;
+    }
+    nav a:hover {
+      color: #2cb142;
+    }
+    h1 {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      text-align: center;
+    }
+    p {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Me</a>
+      <a href="#">Hobbies</a>
+      <a href="#">Stare</a>
+    </nav>
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img
+            id="slide-1"
+            src="images/anyaaaaa.png"
+            alt="Slide 1"
+            style="display: block"
+          />
+          <img
+            id="slide-2"
+            src="images/cootie.jpg"
+            alt="Slide 2"
+            style="display: none"
+          />
+          <img
+            id="slide-3"
+            src="images/glasses.jpg"
+            alt="Slide 3"
+            style="display: none"
+          />
+          <img
+            id="slide-4"
+            src="images/Finally.jpg"
+            alt="Slide 4"
+            style="display: none"
+          />
+          <img
+            id="slide-5"
+            src="images/Untitled15_20230111071723.png"
+            alt="Slide 5"
+            style="display: none"
+          />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+          <a href="#slide-5"></a>
+        </div>
+      </div>
+    </section>
+    <h1>Emmanuel V. Sanchez</h1>
+    <p>
+      An aspiring game developer and artist with a focus on 2D illustrations.
+    </p>
+
+    <script>
+      var i = 0; // start
+      var images = [];
+      var time = 2000; // Time between image transitions
+
+      // Store image element ids
+      images[0] = "slide-1";
+      images[1] = "slide-2";
+      images[2] = "slide-3";
+      images[3] = "slide-4";
+      images[4] = "slide-5";
+
+      // Function to change the image
+      function changeImg() {
+        // Get the current image by its id and set the src to the next image
+        for (var j = 0; j < images.length; j++) {
+          var img = document.getElementById(images[j]);
+          img.style.display = "none"; // Hide all images
+        }
+
+        // Show the current image
+        var currentImg = document.getElementById(images[i]);
+        currentImg.style.display = "block";
+
+        // Cycle through images
+        i = (i + 1) % images.length; // If i reaches the end, it will reset to 0
+
+        setTimeout(changeImg, time); // Set the interval to change the image
+      }
+
+      window.onload = changeImg; // Call the function when the page loads
+    </script>
+  </body>
+</html>
