@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="../css/about_me.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a hclass="active" href="../html_files/about_me.html">About Me</a>
+      <a href="../html_files/hobbies.html">Hobbies</a>
+      <a href="../html_files/stare.html">Surprise</a>
+    </nav>
+    <h1>About Me</h1>
+    <img class="pfp" src="../images/pfp_emman.jpg" alt="My PFP" />
+    <div class="me">
+      <h2>Name: <em>Emmanuel V. Sanchez</em></h2>
+      <h2>Gender: <em>Male</em></h2>
+      <h2>
+        Course:
+        <em>Bachelor of Science in <strong>Computer Science</strong> </em>
+      </h2>
+      <h2>Year and Section: <em>1st year 1B</em></h2>
+    </div>
+
+    <script src="../js/about_me.js"></script>
+  </body>
+</html>
