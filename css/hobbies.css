@@ -1,0 +1,100 @@
+body {
+  background: #f8f8f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #000;
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  color: #2cb142;
+  transform: scale(1.1);
+}
+
+nav a.active {
+  color: #2cb142;
+  text-decoration: underline;
+}
+
+/* Header Styles */
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Layout for Hobby Descriptions and Images */
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.content-layout {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.hobby {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns image and text horizontally */
+  gap: 20px; /* Space between image and text */
+  margin-bottom: 20px;
+  max-width: 800px; /* Limit the width of each hobby section */
+  text-align: left;
+  padding-right: 20px;
+}
+
+.hobby img {
+  width: 100px; /* Fixed image width */
+  height: 100px; /* Fixed image height */
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners for the image */
+  
+}
+.hobby img:hover{
+  background: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+}
+.hobby h2 {
+  font-size: 1.5rem; /* Smaller heading size */
+  color: #333;
+  margin: 0;
+}
+
+.hobby p {
+  font-size: 0.95rem; /* Slightly smaller text */
+  color: #666;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+}

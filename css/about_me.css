@@ -1,0 +1,112 @@
+body {
+  background: #f8f8f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #000;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; /* Add spacing below navigation */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  color: #2cb142;
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+nav a.active {
+  color: #2cb142; /* Highlight active link with green */
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.pfp {
+  float: left;
+  margin-right: 20px;
+  width: 150px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+}
+
+.me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+  max-width: 600px;
+  margin: 20px auto; /* Center the container on the page */
+}
+
+h2 {
+  font-size: 1rem; /* Use relative units for consistent scaling */
+  color: #333;
+  margin: 5px 0;
+}
+
+h2 em {
+  font-style: italic;
+  color: #555;
+}
+
+h2 strong {
+  color: #2cb142;
+}
+
+@media (max-width: 768px) {
+  /* Responsive adjustments for smaller screens */
+  .pfp {
+    float: none;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .me {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

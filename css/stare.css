@@ -1,0 +1,123 @@
+body {
+  background: #f8f8f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #000;
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; /* Add spacing below navigation */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  color: #2cb142;
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+nav a.active {
+  color: #2cb142; /* Highlight active link with green */
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+  #gameContainer {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Use fractional units for responsive sizing */
+    gap: 10px; /* Increase spacing between cells */
+    justify-content: center;
+    align-items: center; /* Center align grid items */
+    margin: 0 auto; /* Center the grid horizontally */
+    width: 320px; /* Define a fixed width for consistent alignment */
+    padding: 20px; /* Add some padding around the grid */
+    background-color: #fff; /* White background for a clean look */
+    border-radius: 10px; /* Round edges for a modern design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333; /* Slightly thicker border for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size for readability */
+    cursor: pointer;
+    background-color: #f9f9f9; /* Lighter background color for better contrast */
+    border-radius: 5px; /* Add slight rounding to the cells */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cell:hover {
+    background-color: #ececec; /* Slightly darker hover color */
+    transform: scale(1.05); /* Add a subtle zoom effect on hover */
+  }
+  
+  .cell.disabled {
+    pointer-events: none;
+    background-color: #e0e0e0; /* Light gray to indicate disabled state */
+    color: #999; /* Muted color for disabled text */
+  }
+  button {
+    margin-top: 20px;
+    padding: 12px 30px; /* Larger padding for a comfortable click area */
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #fff; /* White text for contrast */
+    background-color: #2cb142; /* Green background for a positive restart action */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Fully rounded edges for a modern look */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+  
+  button:hover {
+    background-color: #28a93a; /* Slightly darker green for hover */
+    transform: translateY(-2px); /* Slight upward movement for interactivity */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  button:active {
+    transform: translateY(0); /* Reset movement on click */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow for "pressed" effect */
+  }
+  
+  button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(44, 177, 66, 0.5); /* Add green focus ring for accessibility */
+  }
+  
