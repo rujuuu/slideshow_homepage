@@ -6,33 +6,30 @@
 }
 
 body {
-  background: #f8f8f8;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  font-size: 16px; /* Consistent base font size */
-  color: #333; /* Default text color */
+  background: #ececec; /* Unified background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+  line-height: 1.8; /* Improved readability */
+  font-size: 16px;
+  color: #333;
+
 }
 
 /* Navigation Styles */
 nav {
   background-color: #000;
-  padding: 15px 0; /* Balanced padding */
+  padding: 15px;
   text-align: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  margin-right: 25px;
+  margin-right: 20px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   font-weight: bold;
@@ -45,7 +42,7 @@ nav a:last-child {
 
 nav a:hover {
   color: #2cb142;
-  transform: scale(1.1); /* Hover effect */
+  transform: scale(1.1);
 }
 
 nav a.active {
@@ -53,85 +50,104 @@ nav a.active {
   text-decoration: underline;
 }
 
+
 /* Header Styling */
 h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #222;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
 }
 
 /* Profile Picture Styling */
 .pfp {
-  float: left;
-  margin-right: 20px;
   width: 150px;
-  border: 3px solid #000;
+  border: 3px solid #555;
   border-radius: 20px;
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 20px 20px;
 }
 
 /* Text Container Styling */
 .me {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
   background: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Card effect */
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 20px auto;
+  gap: 20px; /* Add spacing between profile picture and text */
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
   margin: 5px 0;
 }
 
-h2 em {
+.details {
   font-style: italic;
-  color: #555;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 h2 strong {
-  color: #2cb142;
+  color: #4caf50;
+}
+
+/* Slider Component Styling */
+.container {
+  padding: 2rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+  border: 2px solid #000;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 /* Responsive Styling for Smaller Screens */
 @media (max-width: 768px) {
-  /* Profile picture styling */
-  .pfp {
-    float: none;
-    margin: 0 auto 20px;
-    display: block;
-  }
-
-  /* Text container adjustments */
   .me {
-    max-width: 90%;
-    padding: 10px;
-  }
-
-  /* Navigation bar adjustments */
-  nav {
-    padding: 10px;
-  }
-
-  nav a {
-    font-size: 14px;
-    margin-right: 10px;
-  }
-
-  /* Header font size adjustments */
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 0.9rem; /* Slightly smaller font size for headers on mobile */
+    flex-direction: column;
+    align-items: center;
   }
 }
