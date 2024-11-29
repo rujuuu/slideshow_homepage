@@ -95,6 +95,7 @@ h2 {
   font-size: 1.2rem;
   color: #333;
   margin: 5px 0;
+  font-weight: lighter;
 }
 
 .details {
@@ -102,7 +103,10 @@ h2 {
   color: #666;
   font-size: 0.9rem;
 }
-
+h2 em{
+  text-decoration: underline;
+  font-weight: bolder;
+}
 h2 strong {
   color: #4caf50;
 }
